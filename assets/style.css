@@ -537,19 +537,30 @@ margin-top: 8px;
     body{
         position: relative;
     }
+    #court{
+        width: 50%;
+    }
     .ui.header.jumbo h1{
         font-size: 48px;
     }
     .subheader{
         font-size: 20px;
+        line-height: 32px !important;
     }
     .card{
         font-size: 16px;
     }
-    .ui.container.top{
-        height: 80vh;
+    .ui.container.landing{
+        height: 100vh;
     }
-    .landing, .contact{
+    .ui.container.contact{
+        height: 120vh;
+    }
+    .landing{
+        background-position: bottom;
+        background-size: 150%
+    }
+    .contact{
         background-position: bottom;
         background-size: 150%
     }
@@ -594,8 +605,8 @@ margin-top: 8px;
         width: 100%!important;
     }
     .ui.grid > .column:not(.row), .ui.grid > .row > .column {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .studyHeader{
         text-align: left;
@@ -610,22 +621,55 @@ margin-top: 8px;
         width: 100%;
         margin-top: 0px;
     }
-    .studies{
-        height: 350% !important;
-        display: block;
-        overflow: auto;
-    }
-    .ui.container.top{
-        padding-left: 5%;
-        padding-right: 5%;
-    }
     .studyDesc{
         font-size: 16px;
     }
-
+    .ui.grid {
+        margin-left: 0px !important;
+    }
+    .projectName{
+        font-size: 30px !important;
+    }
+    .nextProject{
+        font-size: 24px;
+    }
 
 }
 
+@media only screen and (max-width: 767px){
+    .ui.container.top.landing {
+        width: 100%;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+    .ui.container.top.contact {
+        width: 100%;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+    .ui.container.landingScrolled{
+        width: 84%;
+        margin-left: 8% !important;
+        margin-right: 8% !important;
+    }
+    .ui.container.studies{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .ui.container.footer{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+
+        width: 100% !important;
+    }
+    .allLinks{
+        margin-left: 0px;
+        margin-top: 32px;
+    }
+    .contact-text{
+        font-size: 18px;
+    }
+}
 
 
 
