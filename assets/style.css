@@ -534,6 +534,18 @@ margin-top: 8px;
 
 
 @media only screen and (max-width: 600px) {
+    body{
+        position: relative;
+    }
+    .ui.header.jumbo h1{
+        font-size: 48px;
+    }
+    .subheader{
+        font-size: 20px;
+    }
+    .card{
+        font-size: 16px;
+    }
     .ui.container.top{
         height: 80vh;
     }
@@ -567,12 +579,50 @@ margin-top: 8px;
     .project{
         height: 120vh !important;
     }
-    .footer{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100% !important;
+    .studyTitle{
+        font-size: 32px;
+        letter-spacing: 5px;
+        text-align: left;
     }
+    .ui.column.grid>[class*="five wide"].column, .ui.grid>.column.row>[class*="five wide"].column, .ui.grid>.row>[class*="five wide"].column, .ui.grid>[class*="five wide"].column {
+        display: none;
+    }
+    .ui.column.grid>[class*="one wide"].column, .ui.grid>.column.row>[class*="one wide"].column, .ui.grid>.row>[class*="one wide"].column, .ui.grid>[class*="one wide"].column {
+        display: none;
+    }
+    .ui.column.grid>[class*="ten wide"].column, .ui.grid>.column.row>[class*="ten wide"].column, .ui.grid>.row>[class*="ten wide"].column, .ui.grid>[class*="ten wide"].column {
+        width: 100%!important;
+    }
+    .ui.grid > .column:not(.row), .ui.grid > .row > .column {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .studyHeader{
+        text-align: left;
+    }
+    .studyCard{
+        margin-bottom: 0px;
+    }
+    .proj-arrow{
+        display: none;
+    }
+    .prev-img{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .studies{
+        height: 350% !important;
+        display: block;
+        overflow: auto;
+    }
+    .ui.container.top{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .studyDesc{
+        font-size: 16px;
+    }
+
 
 }
 
