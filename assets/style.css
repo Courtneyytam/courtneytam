@@ -28,6 +28,10 @@ body{
     /* margin-left: 100px; */
 }
 
+#aboutMe{
+    width: 40%;
+}
+
 .landing{
     background-image: url(landing@3x.png);
     background-size: 100% auto;
@@ -537,6 +541,9 @@ margin-top: 8px;
     body{
         position: relative;
     }
+    #aboutMe{
+        width: 100%;
+    }
     #court{
         width: 30%;
     }
@@ -561,9 +568,9 @@ margin-top: 8px;
         background-size: 150%
     }
     .contact{
-        background-position: bottom;
+        background-position: 80% 100%;
         background-size: 150%
-    }
+    } 
     .section-width{
         padding-right: 5%;
         padding-left: 5%;
@@ -589,6 +596,12 @@ margin-top: 8px;
     }
     .project{
         overflow: auto;
+    }
+    .section{
+        padding-top: 48px;
+    }
+    .caption{
+        margin-bottom: 32px !important;
     }
     .projectDetails{
         margin-bottom: 64px;
@@ -688,6 +701,27 @@ margin-top: 8px;
 }
 
 
-
+@media only screen and (max-width: 320px) {
+    .ui.container.landing{
+        height: 120vh;
+    }
+    .ui.container.contact{
+        height: 140vh;
+    }
+    .smallIcon{
+        height: 28px;
+        width: 28px;
+        margin-right: 16px;
+    }
+    .contacticon{
+        font-size: 16px;
+        width: 28px;
+        margin-top: 6px;
+    }
+    .contact-text{
+        font-size: 15px;
+        line-height: 28px;
+    }
+}
 
 
