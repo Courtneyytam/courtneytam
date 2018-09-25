@@ -588,7 +588,19 @@ margin-top: 8px;
         display: block;
     }
     .project{
-        height: 120vh !important;
+        overflow: auto;
+    }
+    .projectDetails{
+        margin-bottom: 64px;
+    }
+    .section-title{
+        font-size: 24px;
+    }
+    .major-title{
+        font-size: 32px;
+    }
+    .full-height{
+        height: auto;
     }
     .studyTitle{
         font-size: 32px;
@@ -653,6 +665,10 @@ margin-top: 8px;
         margin-left: 0px !important;
         margin-right: 0px !important;
     }
+    .ui.container.project{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
     .ui.container.footer{
         margin-left: 0px !important;
         margin-right: 0px !important;
@@ -665,6 +681,9 @@ margin-top: 8px;
     }
     .contact-text{
         font-size: 18px;
+    }
+    .med-jumbo{
+        font-size: 48px !important;
     }
 }
 
