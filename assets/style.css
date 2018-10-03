@@ -239,6 +239,15 @@ button:hover{
 	font-size: 20px;
 	color: white;
 }
+.ui.container.contact{
+    min-height: calc(100vh - 99px);
+}
+
+.ui.container.contact + .ui.container.footer{
+    position: absolute;
+    bottom: 0;
+}
+
 
 .contacticon{
     color: black;
@@ -523,16 +532,47 @@ margin-top: 8px;
 
 
 
-@media only screen and (max-width: 1000px) {
-    .column{
+@media only screen and (max-width: 1050px){
+    .ui.column.grid > .column{
         width: 100% !important;
     }
+
     .landingScrolled .ui.three.column.grid{
         margin: 0;
     }
 }
 
-
+@media only screen and (max-width: 1050px) and (min-width: 800px) {
+    .ui.container.top{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .ui.grid > .column:not(.row), .ui.grid > .row > .column{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .ui.container.top.project{
+        height: 60% !important;
+    }
+    .projectDetails .description {
+        font-size: 16px;
+        margin-left: 24%;
+        width: 64%;
+    }
+    .studyTitle{
+        letter-spacing: 12px;
+    }
+    .proj-arrow{
+        display: none;
+    }
+    .studyCard{
+        margin-right: 24px;
+    }
+    .prev-img{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
 
 
 
@@ -558,10 +598,7 @@ margin-top: 8px;
         font-size: 16px;
     }
     .ui.container.landing{
-        height: 100vh;
-    }
-    .ui.container.contact{
-        height: 120vh;
+        height: 650px;
     }
     .landing{
         background-position: bottom;
@@ -569,7 +606,7 @@ margin-top: 8px;
     }
     .contact{
         background-position: 80% 100%;
-        background-size: 150%
+        background-size: 150%;
     } 
     .section-width{
         padding-right: 5%;
@@ -638,12 +675,13 @@ margin-top: 8px;
     }
     .studyCard{
         margin-bottom: 0px;
+        width: 96%;
     }
     .proj-arrow{
         display: none;
     }
     .prev-img{
-        width: 100%;
+        width: 96%;
         margin-top: 0px;
     }
     .studyDesc{
@@ -666,6 +704,7 @@ margin-top: 8px;
     }
     .ui.container.top.contact {
         width: 100%;
+        min-height: 100vh !important;
         margin-left: 0% !important;
         margin-right: 0% !important;
     }
@@ -698,6 +737,10 @@ margin-top: 8px;
     .med-jumbo{
         font-size: 48px !important;
     }
+    .ui.container.contact + .ui.container.footer{
+        position: default;
+        bottom: initial;
+    }
 }
 
 
@@ -705,7 +748,11 @@ margin-top: 8px;
     .ui.container.landing{
         height: 120vh;
     }
+    .studyHeader{
+        line-height: 32px;
+    }
     .ui.container.contact{
+        min-height: 100vh;
         height: 140vh;
     }
     .smallIcon{
