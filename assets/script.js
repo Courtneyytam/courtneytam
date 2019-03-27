@@ -1,3 +1,8 @@
+$("#KoiFinal").on("loadeddata", function() {
+	document.querySelector(".header-text").style.WebkitAnimationPlayState = "running";
+});
+
+var timer = 0;
 var num = 150;
 var selectedhome = $("#nav-home");
 var selectedcase = $("#nav-case");
@@ -21,8 +26,14 @@ function homeActive(){
 	selectedhome.addClass("active");
 }
 
-$(window).bind('scroll', function(){
-    if ($(window).scrollTop()>num){
+$(window).bind('scroll', scrollWindowBind);
+
+function scrollBind() {
+	$(window).delay(800).bind('scroll', scrollWindowBind);
+}
+
+function scrollWindowBind() {
+	if ($(window).scrollTop()>num){
         $('.menu').addClass('scrolled');
         console.log("scroll working");
     } else{
@@ -36,14 +47,16 @@ $(window).bind('scroll', function(){
 	} else {
 		homeActive();
 	};
-});
+}
 
 function smoothScroll(hash){
+	$(window).unbind('scroll');
 	$('html, body').animate({
 		scrollTop: $(hash).offset().top
 		}, 800, function(){
 			window.location.hash = hash;
 	});
+	setTimeout(scrollBind, 800);
 };
 
 $(document).ready(function(){

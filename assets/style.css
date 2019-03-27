@@ -74,10 +74,11 @@ video{
 .header-text{
     opacity: 0;
     padding-top: 40vh;
-    animation-delay: 3s;
+    animation-delay: 2.8s;
     animation-name: fade-in;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
 
 @keyframes fade-in {
