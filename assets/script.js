@@ -1,14 +1,41 @@
 var num = 150;
+var selectedhome = $("#nav-home");
+var selectedcase = $("#nav-case");
+var selectedcontact = $("#nav-contact");
+
+function caseActive(){
+	selectedhome.removeClass("active");
+	selectedcontact.removeClass("active");
+	selectedcase.addClass("active");
+}
+
+function contactActive(){
+	selectedcase.removeClass("active");
+	selectedhome.removeClass("active");
+	selectedcontact.addClass("active");
+}
+
+function homeActive(){
+	selectedcase.removeClass("active");
+	selectedcontact.removeClass("active");
+	selectedhome.addClass("active");
+}
 
 $(window).bind('scroll', function(){
     if ($(window).scrollTop()>num){
         $('.menu').addClass('scrolled');
         console.log("scroll working");
-    }
-    else
-    {
+    } else{
         $('.menu').removeClass('scrolled');
-    }
+    };
+
+	if(($(window).scrollTop() + $(window).height()) > ($(document).height() - 200)){
+		contactActive();
+	} else if ($(window).scrollTop() > (window.innerHeight - 100)){
+		caseActive();
+	} else {
+		homeActive();
+	};
 });
 
 function smoothScroll(hash){
@@ -21,72 +48,35 @@ function smoothScroll(hash){
 
 $(document).ready(function(){
 	// Add smooth scrolling to all links
-	$(".item").on('click', function(event){
-		if (this.hash !== "") {
-			// Prevent default anchor click behavior
-			event.preventDefault();
-			// Store hash
-			var hash = this.hash;
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			smoothScroll(hash);
-		} // End if
-	});
+	if(window.location.href !== "index.html" || window.location.href !== "/"){
+		$(".NI").on('click', function(event){
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+				// Store hash
+				var hash = this.hash;
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				smoothScroll(hash);
+			} // End if
+		});
+
+		selectedhome.on('click', function(event) {
+			homeActive();
+		});
+
+		selectedcase.on('click', function(event) {
+			caseActive();
+		});
+
+		selectedcontact.on('click', function(event) {
+			contactActive();
+		});
+
+	} else {
+		homeActive();
+	}
 
 });
-
-if ((window.location.pathname != "/index.html") || (window.location.pathname != "/")) {
-	$("#caseStudies").on('click', function(event){
-		window.location.pathname = "/";
-		smoothScroll("#case-studies");
-	});
-	$("#aboutPanels").on('click', function(event){
-		window.location.pathname = "/";
-		smoothScroll("#about-panels");
-	});
-}
-
-/*
-
-$(document).ready(function() {
-    $('html, body').hide();
-
-    if (window.location.hash) {
-        setTimeout(function() {
-            $('html, body').scrollTop(0).show();
-            $('html, body').animate({
-			scrollTop: $(hash).offset().top
-				}, 800, function(){
-					window.location.hash = hash;
-			  });
-        }, 0);
-    }
-    else {
-        $('html, body').show();
-    }
-});*/
-
-var selectedhome = $("#nav-home");
-var selectedcase = $("#nav-case");
-var selectedcontact = $("#nav-contact");
-
-selectedhome.on('click', function(event) {
-	selectedcase.removeClass("active");
-	selectedcontact.removeClass("active");
-	selectedhome.addClass("active");
-});
-
-selectedcase.on('click', function(event) {
-	selectedhome.removeClass("active");
-	selectedcontact.removeClass("active");
-	selectedcase.addClass("active");
-});
-
-selectedcontact.on('click', function(event) {
-	selectedcase.removeClass("active");
-	selectedhome.removeClass("active");
-	selectedcontact.addClass("active");
-});
-
 
 
