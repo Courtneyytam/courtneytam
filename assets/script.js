@@ -11,10 +11,17 @@ $(window).bind('scroll', function(){
     }
 });
 
+function smoothScroll(hash){
+	$('html, body').animate({
+		scrollTop: $(hash).offset().top
+		}, 800, function(){
+			window.location.hash = hash;
+	});
+};
+
 $(document).ready(function(){
 	// Add smooth scrolling to all links
-	$("a").on('click', function(event) {
-		// Make sure this.hash has a value before overriding default behavior
+	$(".item").on('click', function(event){
 		if (this.hash !== "") {
 			// Prevent default anchor click behavior
 			event.preventDefault();
@@ -22,14 +29,42 @@ $(document).ready(function(){
 			var hash = this.hash;
 			// Using jQuery's animate() method to add smooth page scroll
 			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			$('html, body').animate({
-			scrollTop: $(hash).offset().top
-			}, 800, function(){
-				window.location.hash = hash;
-		  });
-	} // End if
+			smoothScroll(hash);
+		} // End if
 	});
+
 });
+
+if ((window.location.pathname != "/index.html") || (window.location.pathname != "/")) {
+	$("#caseStudies").on('click', function(event){
+		window.location.pathname = "/";
+		smoothScroll("#case-studies");
+	});
+	$("#aboutPanels").on('click', function(event){
+		window.location.pathname = "/";
+		smoothScroll("#about-panels");
+	});
+}
+
+/*
+
+$(document).ready(function() {
+    $('html, body').hide();
+
+    if (window.location.hash) {
+        setTimeout(function() {
+            $('html, body').scrollTop(0).show();
+            $('html, body').animate({
+			scrollTop: $(hash).offset().top
+				}, 800, function(){
+					window.location.hash = hash;
+			  });
+        }, 0);
+    }
+    else {
+        $('html, body').show();
+    }
+});*/
 
 var selectedhome = $("#nav-home");
 var selectedcase = $("#nav-case");
@@ -52,3 +87,6 @@ selectedcontact.on('click', function(event) {
 	selectedhome.removeClass("active");
 	selectedcontact.addClass("active");
 });
+
+
+
