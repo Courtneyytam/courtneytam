@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Courtney Tam</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet"> 
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/qcq6kox.css">
+        <link rel="shortcut icon" type="image/x-icon" href='favicon.ico'/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126633980-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126633980-1');
+</script>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="ui four item secondary menu">
+                <a href="index.html" class="item"><img src="assets/landing_2@3x.png" id="court"></a>
+                <a href="index.html" class="item menuItem"><span class="rectangle"></span> courtney <br>tam</a>
+                <a href="index.html#case-studies" id="caseStudies" class="item active menuItem"><span class="rectangle"></span> case <br> studies</a>
+                <a href="index.html#about-panels" id="aboutPanels" class="item menuItem"><span class="rectangle"></span> contact</a>
+        </div>
+        
+        <div class="ui fluid container top project full-height">
+            <div class="ui header project">
+                <h1 class="med-jumbo">Smart Tagger</h1>
+            </div>
+
+            <div class="projectDetails">
+                <div class="leftPanel">
+                    <div class="title">
+                        Company
+                    </div>
+                    <div class="item">
+                        Microsoft
+                    </div>
+
+                    <div class="title">
+                        Year
+                    </div>
+                    <div class="item">
+                        2019
+                    </div>
+
+                    <div class="title">
+                        Type
+                    </div>
+                    <div class="item">
+                        UX Research <br>
+                        Interaction Design
+                    </div>
+                </div>
+
+                <div class="description">
+                       The Office Shared Experiences team is part of the Microsoft R&amp;D who focuses primarily on collaboration features across the Office365 suite. A key project customer’s face is struggling to find documents in the Office 365 cloud. The original solution involved tags to aid in content based searches. However, the interaction model had high friction and low visibility which hindered its adoption into a user’s workflow. Therefore, a supplementary tool called Smart Tagger was designed to improve the tagging process for Word, PowerPoint, Excel, and OneNote. It was designed with an intuitive front-facing user interface that leveraged smart technologies to make the action of tagging easier. 
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section white">
+            <img class="large-img" src="assets/smarttagger-prev.jpg"/>
+            <p class="caption">Working prototype of Smart Tagger Taskpane</p>
+        </div>
+
+        <div class="section section-width white">
+            <p class="major-title">Problem Definition</p>
+            <div class="section-text">
+                Through research and customer clinics we found that people struggle to find documents in the Microsoft 365 Cloud. This is caused by file titles being too specific, file retrieval is path focused not content focused, and hierarchical folder structures are not optimized for collaborative work. Our hypothesis is that employee generated documents are not providing their full potential value due to their low visibility. 
+                <br/><br/>
+                A common known solution for better content retrieval is to use a tagging system to index information. Tagging is currently an existing feature within Office 365, however, due to its low visibility and a high cognitive load it is very difficult for users to start tagging and to integrate the practice into their workflow.  Due to the low adoption of tags, customers are unable to complete accurate content-based searches using tags when finding files. 
+
+            </div>
+            <img class="large-img" src="assets/smartTagger/originalflow.png"/>
+            <p class="caption">Original tagging model flow diagram</p>
+        </div>
+
+        <div class="section section-width grey">
+            <p class="major-title">Product Goal</p>
+            <div class="section-text">To increase the usage of tags which will improve the efficiency and accuracy while finding files, and subsequently increase the overall collaboration within teams. The original tagging model had high friction and low visibility which hindered its adoption into a user’s workflow. A supplementary tool called Smart Tagger was designed to improve the tagging process for Word, PowerPoint, Excel, and OneNote. </div>
+        </div>
+
+        <div class="section section-width white">
+            <div class="column-left">
+                <p class="major-title">Constraints</p>
+                <ul class="section-list">
+                    <li>Must design within Office design guidelines using Fabric UI (office design library)</li>
+                    <li>Design must be flexible to work across all office products (word, excel, powerPoint, sharePoint, etc)</li>
+                    <li>I must design for all platforms with consideration of all input methods including accessibility input methods</li>
+                </ul>
+            </div>
+            <div class="column-right">
+                <p class="major-title">Assumptions</p>
+                <ul class="section-list">
+                    <li>Hierarchical folder structures are limiting collaborative work and is the core issue with document visibility and discoverability</li>
+                    <li>Tagging is used for content that lives within a large corpus of documents that is created by many authors</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section section-width grey">
+            <p class="major-title">Impact</p>
+            <div class="column-left">
+                <p class="section-title">Impact for Microsoft</p>
+                <ul class="section-list">
+                    <li>Increased collaboration is a core Office key performance indicator</li>
+                    <li>Developing a proof of concept prototype is cost-friendly and efficient and will help validate a new tagging solution</li>
+                </ul>
+            </div>
+            <div class="column-right">
+                <p class="section-title">Impact for our customers</p>
+                <ul class="section-list">
+                    <li>Document authors will benefit from the increased visibility and value of their work when it is well tagged</li>
+                    <li>Document consumers will be impacted by efficiency in discovering relevant documents from across the entire organization</li>
+                    <li>Existing knowledge and conent will be better utilized helping teams work more efficiently </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section section-width white">
+            <p class="major-title">Process</p>
+            <p class="section-title">1. Design Sprint</p>
+            <div class="section-text">To kick off the project, we held a three day design sprint to formulate our ideas. This process consisted of affinity mapping of problems and solutions, target audience definition, 8-second sketching, red-dotting of ideas, and storyboarding. At the end of this process, we had sculpted out our minimal viable prototype which will be used to guide our initial weekly sprints. </div>
+            <img class="section-img" src="assets/smartTagger/sprint.jpg"/>
+            <p class="caption">Sometimes you just need to design like crazy.</p>
+            <p class="section-title">2. Customer Clinics</p>
+            <div class="section-text">To find out about this problem, customer clinics were held. This is where we would work with specific companies to gain feedback on our products. In this session we focused on collaboration between office products. We held brainstorming activities to dive deeper into the problem space and to think creatively about a possible solution. Afterwards, a cognitive walk, where we showed a group of 10-15 customers the proposed design of our product to gain real tangible feedback.</div>
+            <div class="section-img" style="overflow: auto;">
+                <div class="column-left">
+                    <img class="section-img" src="assets/smartTagger/stickies.jpg"/>
+                </div>
+                <div class="column-right">
+                    <img class="section-img" src="assets/smartTagger/brainstorm.jpg"/>
+                </div>
+            </div>
+            <p class="caption">Affinity map of problem categories (left), brainstorming a possible solution flow (right).</p>
+
+            <p class="section-title">3. Designing for the Office Ecosystem</p>
+            <div class="section-text">A key factor when designing a feature for Office applications was to keep in mind of the Office ecosystem. The Office365 suite of applications thrive when the interactions between applications is a seamless and a consistent experience. Consistency is created with repetition of user workflows, UX patterns, and visual styles. 
+            <br/><br/>
+            Smart Tagger created consistency by leveraging the existing tagging patterns in OneNote. The similar UX pattern is used across other external products with tagging and would feel natural for Microsoft customers. For visual consistency, Smart Tagger used FabricUI, Office365’s design system. This ensured that Smart Tagger will look the same as other features within Office applications. An additional benefit with the choice to use FabricUI, was that the development process will be simplified by leveraging the pre-built components.
+            <br/><br/>
+            The last key factor in designing for the Office ecosystem was to design with the full cycle in mind, in other words, designing to “close the loop”. Tag entry may be the action of focus for Smart Tagger, but it is equally important to understand the impact of tags during the search process. Although designing how tags are searched is out of scope, mockups and design explorations were created to help the team visualize how Smart Tagger fits into this problem space.
+</div>
+
+            <div class="column-left">
+            <img class="section-img" src="assets/smartTagger/flyout.jpg"/>
+            </div>
+            <div class="column-right">
+                <img class="section-img" src="assets/smartTagger/newDoc.jpg"/>
+            </div>
+            <p class="caption">Save-As flyout tag entry (left), tag display on document list (right).</p>
+
+
+            <p class="section-title">4. Accessibility</p>
+            <div class="section-text">The goal for Smart Tagger was to be a well-designed feature that was accessible to users of all abilities. This included those with low vision, blindness, colour blindness and motor impairments. Smart Tagger was designed following accessibility guidelines for color contrast, keyboard navigation, and screen readers.</div>
+            <img class="section-img" src="assets/smartTagger/accessibility.png"/>
+            <p class="caption">Screen reader accessibility markup of Smart Tagger</p>
+
+
+            <p class="section-title">5. Future Explorations</p>
+            <div class="section-text"><strong>TAG SETS</strong><br/><br/>
+                The concept of tag sets were brought up by users who talked discussed the need to tag multiple documents with the same tags. They explained how tedious the current process was, where a Word document would be used to record tag lists to copy and paste into document metadata. With tag sets, Smart Tagger would allow users to save multiple tags under one tag set, and then apply all tags to a document at once. By doing so, it would eliminate the need to store tag groups externally, which removes a pain point in the user’s workflow.
+            </div>
+            <img class="section-img" src="assets/smartTagger/tagset.png"/>
+            <p class="caption">Example flow of the tag sets exploration</p>
+            <div class="section-text"><strong>TAG TYPES</strong><br/><br/>
+                Tag types were driven by the difficulty and errors occurring when uploading files on to SharePoint. This was brought to the team’s attention by L.L. Bean, who required their employees to define specific types of tags on each document prior to uploading the file. To circumvent this step, users would enter terms such as ‘unknown’ and ’n/a’ to each field to bypass uploading errors which cluttered the corpus of tags.
+                <br><br>
+                To solve this issue, the concept of tag types were introduced. Tag types allowed the user to preface the tag with a type through the same input bar within Smart Tagger. Additionally, with organizations that required specific types of tags, an informational prompt would appear on the task pane. This would notify the user of the potential SharePoint upload error early in the process. 
+
+            </div>
+            <img class="section-img" src="assets/smartTagger/tagtype.png"/>
+            <p class="caption">Example flow of the tag types exploration</p>
+
+            <p class="section-title">6. Interaction Model</p>
+            <div class="section-text"><strong>FIRST RUN EXPERIENCE</strong><br/><br/>
+                The first run experience screen served two purposes. Firstly, the screen served an educational purpose, where the user can learn about the benefits of tagging and what Smart Tagger can accomplish. The second reason was for the security and privacy of the customers. In order for the customers to use Smart Tagger’s intelligent tag recommendation, the user must opt-in to Microsoft Cognitive Services. Those who opt out will use s local algorithm to generate recommended tags. The opt-in option is represented within the task pane a second time to minimizes the accidental or unintended action of selecting the Call-To-Action button on the FRE screen.
+            </div>
+            <img class="section-img" src="assets/smartTagger/FRE.png"/>
+            <p class="caption">First Run Experience flow with 2 possible outcomes</p>
+
+            <div class="section-text"><strong>GENERAL EXPERIENCE</strong><br/><br/>
+                The general tag area is located in the top portion on the main task pane screen. It included a simple input bar and space below to display added tags. In its empty state, the display tag area included simple copy which prompted the user to add a tag. Below this section was the recommended tag area. While the user writes content in the document, the top ten recommended tags would appear. If the document has changed significantly and the top ten recommended tags had changed, the display would refresh three-seconds after the user has stopped typing. The refresh was delayed to avoid distracting users while they were working. Lastly, the recommended tag area included a simple generate tag button to allow users to show new recommended tags if none of the tags fit their needs.
+            </div>
+            <img class="section-img" src="assets/smartTagger/prototype.png"/>
+            <p class="caption">Working prototype of Smart Tagger: recommended tags are generated from document content</p>
+
+        </div>
+
+         <div class="section section-width grey">
+            <p class="major-title">Conclusion</p>
+             <div class="section-text">Upon the completion of version 1.0 of Smart Tagger, the final product entered the release pipeline. This process consisted of quality testing, accessibility reviews, and security reviews. After Smart Tagger passed this step, it was privately released to a group of companies for the initial stages of large scale testing. 
+                <br/><br>
+            For future continuations of this project, I recommend designing collaboration feedback into Smart Tagger. Currently, collaborative documents have multiple authors with the ability to edit tags, can do so freely and undocumented. There is no feedback system that informs the user of the changes to the tags. 
+            </div>
+        </div>
+
+
+
+        <div class="linkToNextProject">
+            <div class="nextProject">Next Project:</div>
+            <div class="projectName">Hatchful Onboarding</div>
+            <a href="hatchful-onboarding.html">
+                <img class="navigationArrow next" src="assets/arrow-right_2@3x.png">
+            </a>
+        </div>
+
+        <div class="ui container footer">
+            <a href="mailto:courtney.ktam@gmail.com"><i class="fas fa-envelope footerIcon"></i></a>
+            <a href="http://www.dribbble.com/courtneyytam"><i class="fab fa-dribbble footerIcon"></i></a>
+            <a href="http://www.linkedin.com/in/courtneytam"><i class="fab fa-linkedin footerIcon"></i></a>
+            <a href="http://www.instagram.com/_courtneytam"><i class="fab fa-instagram footerIcon"></i></a>
+        </div>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js" async defer></script>
+        <script src="assets/script.js"></script>
+    </body>
+</html>

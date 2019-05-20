@@ -14,8 +14,21 @@ body{
     position: relative;
 }
 
+button:focus {outline:0;}
+
 .link-white{
     color: white;
+}
+
+#ctaResume{
+    border: 1px solid #ffc901;
+    color: #ffc901;
+    margin-top: 40px;
+}
+
+#ctaResume:hover{
+    color: black !important;
+    background-color: #ffc901 !important;
 }
 
 .inline-link{
@@ -38,9 +51,12 @@ body{
     height: 100vh;
 }
 
-#KoiFinal {
+#KoiStart {
+    z-index: -2;
+}
+
+.bkgdvid{
     position: absolute;
-    z-index: -1;
     top: 0;
     right: 0;
     left: 0;
@@ -48,21 +64,14 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-video{
     background-color: black;
     background-position: center center;
     background-size: contain;
 }
 
-#KoiGlow{
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+#KoiCycle{
+    z-index: -1;
+    visibility: hidden;
 }
 
 .header-content {
@@ -276,19 +285,21 @@ h4{
 
 button{
     font-weight: 700;
-    width: 208px;
-    height: 48px;
+    width: 200px;
+    height: 44px;
     border-radius: 32px;
-    border: solid 1px black;
     background-color:rgba(0, 0, 0, 0);
-    color: black;
     margin-top: 24px;
-
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
-button:hover{
+button.resume{
+    border: solid 1px black;
+    color: black;
+}
+
+button.resume:hover{
     background-color: black;
     color: #ffc901;
 }
@@ -337,7 +348,7 @@ button:hover{
 
 #case-studies{
     padding-top:170px;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
 }
 /* Contact Page */
 
@@ -428,6 +439,7 @@ button:hover{
     margin-bottom: 40px;
     line-height: 30px;
     font-size: 14px;
+    font-weight: 200;
 }
 
 .seeMore{
@@ -438,6 +450,7 @@ button:hover{
 
 
 .seeMore:hover{
+    color: #ffc901;
     margin-left: 10px;
     -webkit-transition: all 0.20s ease-in-out;
     transition-timing-function: ease-in-out;
@@ -446,7 +459,7 @@ button:hover{
 
 .prev-img{
     width: 100%;
-    margin-top: 60px;
+    margin-top: 80px;
     border-radius: 16px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.5);
     transition: all 0.20s ease-in-out;
@@ -456,7 +469,7 @@ button:hover{
     -webkit-transition: all 0.20s ease-in-out;
     transition-timing-function: ease-in-out;
     transition: all 0.20s ease-in-out;
-    margin-top: 50px;
+    margin-top: 60px;
     box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.7);
 }
 
@@ -483,6 +496,20 @@ button:hover{
 
 .image-box{
     position: relative;
+}
+
+#moreProjects{
+    border: none;
+    font-weight: 700;
+    color: #ffc901;
+    float: left;
+    margin-left: 24px;
+    background-color: black;
+}
+
+#moreProjects:hover{
+    background-color: #ffc901;
+    color: black;
 }
 
 /* Project Details */
